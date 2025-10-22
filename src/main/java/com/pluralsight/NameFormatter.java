@@ -27,8 +27,8 @@ public class NameFormatter {
         input[0] = input[0].trim();
         input[input.length - 1] = input[input.length - 1].trim();
         return switch (input.length) {
-            case 2 -> input[1] + ", " + input[0];
-            case 4 -> input[3] + ", " + input[0] + " " + input[1] + " " + input[2];
+            case 2 -> format("", input[0], "", input[1], "");
+            case 4 -> format("", input[0], input[1],input[2], input[3]);
             default -> format(input[0], input[1], input[2], input[3], input[4]);
         };
     }
