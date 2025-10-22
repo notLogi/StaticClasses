@@ -9,7 +9,7 @@ public class NameFormatter {
             System.out.println("Need first or last name.");
             return null;
         }
-        return lastName + ", " + firstName;
+        return format("", firstName, "", lastName, "");
     }
 
     public static String format(String prefix, String firstName, String middleName, String lastName, String suffix){
